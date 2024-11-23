@@ -30,3 +30,13 @@ func _physics_process(delta: float) -> void:
 		_animated_sprite.stop()
 
 	move_and_slide()
+	
+	for i in range(get_slide_collision_count()):
+		var collision = get_last_slide_collision()
+		#print(collision.get_collider())
+		if collision.get_collider().navigation_enabled == false:
+			print("water")
+			#var current_scene = get_tree().current_scene.filename
+			# Reload the scene
+			if get_tree() is SceneTree:
+				get_tree().change_scene_to_file("res://node_2d.tscn")
