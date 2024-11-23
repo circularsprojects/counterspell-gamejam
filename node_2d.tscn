@@ -1,16 +1,10 @@
-[gd_scene load_steps=19 format=4 uid="uid://cgfsexxag3q10"]
+[gd_scene load_steps=13 format=4 uid="uid://cgfsexxag3q10"]
 
 [ext_resource type="Texture2D" uid="uid://bkbg1vwwwebpv" path="res://Dungeon Tile Set.png" id="1_a6u7b"]
-[ext_resource type="Texture2D" uid="uid://lnjuuj18c4bi" path="res://character_sprites/tile000.png" id="2_j3q2i"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="2_qovml"]
-[ext_resource type="Texture2D" uid="uid://tkn1tdvo6hjy" path="res://character_sprites/tile001.png" id="3_vg78a"]
-[ext_resource type="Texture2D" uid="uid://bdvps3kop00w1" path="res://character_sprites/tile002.png" id="4_dbt3i"]
 [ext_resource type="Texture2D" uid="uid://7emcys1n1p8c" path="res://character_sprites/tile003.png" id="5_t7qgo"]
 [ext_resource type="Texture2D" uid="uid://dapfgekdxiqvx" path="res://character_sprites/tile004.png" id="6_f5727"]
 [ext_resource type="Texture2D" uid="uid://dbv4kr3050q6p" path="res://character_sprites/tile005.png" id="7_kofih"]
-[ext_resource type="Texture2D" uid="uid://cauy0dpejskf6" path="res://character_sprites/tile006.png" id="8_wcoop"]
-[ext_resource type="Texture2D" uid="uid://cef876c3g7a4g" path="res://character_sprites/tile007.png" id="9_j8kec"]
-[ext_resource type="Texture2D" uid="uid://bwls76n1kig2q" path="res://character_sprites/tile008.png" id="10_i1w0k"]
 [ext_resource type="Texture2D" uid="uid://dg4fxd7rce0rp" path="res://character_sprites/tile009.png" id="11_2hggw"]
 [ext_resource type="Texture2D" uid="uid://jac24ak71jkn" path="res://character_sprites/tile010.png" id="12_4u11p"]
 [ext_resource type="Texture2D" uid="uid://d0xgwupgsvd42" path="res://character_sprites/tile011.png" id="13_seafa"]
@@ -230,50 +224,6 @@ size = Vector2(16, 23)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_j3q2i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_vg78a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_dbt3i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_t7qgo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_f5727")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_kofih")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_wcoop")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_j8kec")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_i1w0k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_2hggw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_4u11p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_seafa")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_2hggw")
-}, {
-"duration": 1.0,
 "texture": ExtResource("12_4u11p")
 }, {
 "duration": 1.0,
@@ -281,6 +231,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_4u11p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2hggw")
 }],
 "loop": true,
 "name": &"left",
@@ -288,9 +241,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_t7qgo")
-}, {
-"duration": 1.0,
 "texture": ExtResource("6_f5727")
 }, {
 "duration": 1.0,
@@ -298,6 +248,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_f5727")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t7qgo")
 }],
 "loop": true,
 "name": &"right",
@@ -324,5 +277,8 @@ shape = SubResource("RectangleShape2D_v57qp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_mvpap")
-animation = &"left"
-frame_progress = 0.132339
+animation = &"right"
+frame = 2
+frame_progress = 0.67775
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/CharacterBody2D"]
